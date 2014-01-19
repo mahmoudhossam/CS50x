@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <cs50.h>
 #include <limits.h>
+#include <cs50.h>
 
 int get_line_count();
 void print_lines(int count);

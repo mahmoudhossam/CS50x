@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <cs50.h>
 #include <math.h>
+#include <cs50.h>
 
 #define QUARTER 25
 #define DIME 10
@@ -28,7 +28,6 @@ float process_input()
     } else {
         process_input();
     }
-    // TODO: validate input
     return input;
 }
 
