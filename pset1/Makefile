@@ -1,7 +1,6 @@
 all = mario greedy
 
-all:
-	make $(all)
+all: $(all)
 
 clean:
 	rm -f $(all)
