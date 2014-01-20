@@ -2,18 +2,18 @@
 #include <limits.h>
 #include <cs50.h>
 
-int get_line_count();
+int line_count();
 void print_lines(int count);
 void print_hashes(int total, int number);
 
-int main()
+int main(void)
 {
-    int num = get_line_count();
+    int num = line_count();
     print_lines(num);
     return 0;
 }
 
-int get_line_count()
+int line_count()
 {
     int input;
     printf("Enter a number: ");
@@ -22,7 +22,8 @@ int get_line_count()
         if (input >= 0 && input <= 23)
         {
             return input;
-        } else {
+        } else
+        {
             printf("Retry: ");
         }
     }
@@ -43,9 +44,11 @@ void print_hashes(int total, int number)
     total += 3;
     for (int i = 2; i < total; i++)
     {
-        if (i > total - number){
+        if (i > total - number)
+        {
             printf("#");
-        } else {
+        } else
+        {
             printf(" ");
         }
     }

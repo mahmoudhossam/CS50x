@@ -3,24 +3,26 @@
 #include <stdlib.h>
 #include <cs50.h>
 
-char rot13(char c, int k);
-void encrypt_string(string input, int key);
+char rot13(char character, int k);
+void print_cipher(string input, int key);
 
 int main(int argc, string argv[])
 {
     int key;
-    if (argc != 2){
+    if (argc != 2)
+    {
         printf("Wrong number of arguments, exiting...");
         return 1;
-    } else {
+    } else
+    {
         key = atoi(argv[1]);
     }
     string input = GetString();
-    encrypt_string(input, key);
+    print_cipher(input, key);
     return 0;
 }
 
-void encrypt_string(string input, int key)
+void print_cipher(string input, int key)
 {
     int length = strlen(input);
     for (int i = 0; i < length; i++)
@@ -31,16 +33,17 @@ void encrypt_string(string input, int key)
 }
 
 
-char rot13(char c, int k)
+char rot13(char character, int k)
 {
     int start;
-    if (c >= 65 && c <= 90)
+    if (character >= 65 && character <= 90)
     {
         start = 65;
-        c = ((c - start + k) % 26) + start;
-    } else if(c >= 97 && c <= 122) {
+        character = ((character - start + k) % 26) + start;
+    } else if(character >= 97 && character <= 122)
+    {
         start = 97;
-        c = ((c - start + k) % 26) + start;
+        character = ((character - start + k) % 26) + start;
     }
-    return c;
+    return character;
 }
