@@ -19,6 +19,7 @@ int main(int argc, string argv[])
     }
     string input = GetString();
     print_cipher(input, key);
+    free(input);
     return 0;
 }
 
