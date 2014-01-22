@@ -1,4 +1,4 @@
-all = mario greedy
+all = hello mario greedy
 
 all: $(all)
 
